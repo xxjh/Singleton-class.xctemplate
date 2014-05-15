@@ -15,6 +15,9 @@
 }
 
 + (___FILEBASENAMEASIDENTIFIER___ *) instance;
+
+#if !__has_feature(objc_arc)
 + (void) releaseInstance;
+#endif
 
 @end

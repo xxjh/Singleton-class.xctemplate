@@ -121,6 +121,8 @@ static ___FILEBASENAMEASIDENTIFIER___ *_default = nil;
 	return _default;
 }
 
+#if !__has_feature(objc_arc)
+
 - (oneway void)superRelease
 {
     //release custom instance here
@@ -212,5 +214,7 @@ static ___FILEBASENAMEASIDENTIFIER___ *_default = nil;
 {
     return INT32_MAX;
 }
+
+#endif
 
 @end
